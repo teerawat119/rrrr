@@ -3,51 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- สั่ง Redirect ทาง Meta Tag อีกชั้นเพื่อความชัวร์ (1 วินาที) -->
+  <meta http-equiv="refresh" content="1;url=it_department_showcase.html#home">
   <title>IT - วิทยาลัยการอาชีพศรีสะเกษ</title>
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts - Kanit -->
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <style>
-    body {
-      font-family: 'Kanit', sans-serif;
-    }
-    /* Spinner Animation Customization */
-    @keyframes spin-fast {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .animate-spin-custom {
-      animation: spin-fast 0.8s linear infinite;
-    }
-  </style>
-
-  <!-- Script redirect 1 วินาที (1000ms) -->
   <script>
+    // สั่งเปลี่ยนหน้าผ่าน JS อัตโนมัติใน 1 วินาที (1000ms)
     setTimeout(function() {
-      window.location.href = "file:///C:/Users/924/Downloads/it_department_showcase.html#home";
+      window.location.replace("it_department_showcase.html#home");
     }, 1000);
   </script>
 </head>
+<body class="bg-gradient-to-br from-purple-50 via-white to-blue-50 h-screen w-screen flex flex-col items-center justify-center relative overflow-hidden select-none font-['Kanit']">
 
-<body class="bg-gradient-to-br from-purple-50 via-white to-blue-50 h-screen w-screen flex flex-col items-center justify-center relative overflow-hidden select-none">
-
-  <!-- Background Decorative Blur Elements -->
+  <!-- Effect Background -->
   <div class="absolute -top-20 -left-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-pulse"></div>
   <div class="absolute -bottom-20 -right-20 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-pulse"></div>
 
-  <!-- Loading Card Container -->
+  <!-- Loading Content -->
   <div class="relative z-10 flex flex-col items-center text-center p-8">
-    
-    <!-- Logo Icon Box -->
     <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-500/30 mb-6">
-      <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-      </svg>
+      <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
     </div>
 
-    <!-- Title & Badge -->
     <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-purple-100 px-3 py-1 rounded-full text-xs font-medium text-slate-600 shadow-sm mb-3">
       <span class="w-2 h-2 rounded-full bg-orange-500 animate-ping"></span>
       แผนกเทคโนโลยีสารสนเทศ
@@ -57,20 +37,17 @@
       วิทยาลัยการอาชีพศรีสะเกษ
     </h1>
 
-    <!-- Custom Loading Spinner -->
+    <!-- Spinner -->
     <div class="relative w-12 h-12 mb-4">
       <div class="absolute inset-0 rounded-full border-4 border-purple-100"></div>
-      <div class="absolute inset-0 rounded-full border-4 border-orange-500 border-t-transparent animate-spin-custom"></div>
+      <div class="absolute inset-0 rounded-full border-4 border-orange-500 border-t-transparent animate-spin"></div>
     </div>
 
-    <!-- Loading Subtext -->
     <p class="text-sm font-light text-slate-500 tracking-wide">
       กำลังนำคุณเข้าสู่ระบบ...
     </p>
-
   </div>
 
-  <!-- Bottom Tag -->
   <div class="absolute bottom-6 bg-orange-500 text-white text-xs px-3 py-1 rounded-lg font-medium shadow-md shadow-orange-500/20">
     🛠️ ปีการศึกษา 2569
   </div>
